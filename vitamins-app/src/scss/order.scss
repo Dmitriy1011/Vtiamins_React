@@ -1,0 +1,331 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+.order {
+    position: relative;
+    background-color: $blackBgColor;
+
+    &-container {
+        padding: 0 177px 112px 177px;
+        width: 100%;
+    }
+
+    &__title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 77px;
+        font-weight: $font-weight-700;
+        font-size: $font-size-48;
+        line-height: $line-height-57;
+
+        &-upper {
+            color: $fontWhiteColor;
+        }
+
+        &-lower {
+            color: $yellowColor;
+        }
+    }
+
+    &__price {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 45px;
+
+        &-cross {
+            margin-right: 56px;
+            @include similarStyles-3;
+            -webkit-text-decoration: line-through 2px;
+            text-decoration: line-through 2px;
+            color: $fontCrossPriceColor;
+        }
+
+        &-actual {
+            font-weight: $font-weight-400;
+            font-size: $font-size-48;
+            line-height: $line-height-57;
+            color: $fontWhiteColor;
+        }
+    }
+
+    &__content {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: inherit;
+        grid-template-columns: inherit;
+        gap: 111px;
+        grid-template-areas: "ginger delivery virus";
+        margin-bottom: 64px;
+        min-height: 289px;
+
+        &-ginger {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            grid-area: ginger;
+
+            &-text {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                @include similarStyles-2;
+                text-align: center;
+                color: $fontWhiteColor;
+
+                &-orange {
+                    color: $yellowColor;
+                }
+            }
+        }
+
+        &-delivery {
+            -ms-grid-row: 1;
+            -ms-grid-column: 3;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            grid-area: delivery;
+
+            &-text {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+
+                &-upper {
+                    margin-bottom: 8px;
+                    @include similarStyles-3;
+                    color: $fontWhiteColor;
+                }
+
+                &-lower {
+                    font-weight: $font-weight-400;
+                    font-size: $font-size-24;
+                    line-height: $line-height-28;
+                    color: $yellowColor;
+                }
+            }
+        }
+
+        &-virus {
+            -ms-grid-row: 1;
+            -ms-grid-column: 5;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            grid-area: virus;
+
+            &-text {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                @include similarStyles-2;
+                text-align: center;
+                color: $fontWhiteColor;
+
+                &-orange {
+                    color: $yellowColor;
+                }
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            &-ginger {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1
+            }
+
+            &-delivery {
+                -ms-grid-row: 2;
+                -ms-grid-column: 1
+            }
+
+            &-virus {
+                -ms-grid-row: 3;
+                -ms-grid-column: 1
+            }
+        }
+    }
+
+    &__lower-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        &-btn {
+            padding: 18px 57px;
+            border-radius: 7px;
+            border: none;
+            background-color: $yellowColor;
+            @include similarStyles-2;
+            cursor: pointer;
+        }
+    }
+
+    @media(max-width: 1366px) {
+        &-container {
+            padding: 0 50px 112px 50px;
+        }
+
+        &__title {
+            margin-bottom: 76px;
+        }
+
+        &__content {
+            min-height: 250px;
+
+            &-delivery {
+                &-text {
+                    &-upper {
+                        font-size: $font-size-28;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 992px) {
+        &-container {
+            padding: 0 25px 112px 25px;
+        }
+
+        &__title {
+            padding-top: 30px;
+            font-size: 31px;
+            text-align: center;
+        }
+
+        &__content {
+            -ms-grid-columns: minmax(1fr, auto);
+            grid-template-columns: minmax(1fr, auto);
+            -ms-grid-rows: (1fr)[3];
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "ginger"
+                "delivery"
+                "virus"
+            ;
+            min-height: 1000px;
+
+            &-ginger {
+                &-text {
+                    line-height: 24px;
+                }
+            }
+
+            &-virus {
+                &-text {
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 576px) {
+        &-container {
+            padding: 0 15px 90px 15px;
+        }
+
+        &__title {
+            margin-bottom: 54px;
+            font-size: 28px;
+        }
+
+        &__price {
+            &-cross {
+                font-size: 32px;
+            }
+
+            &-actual {
+                font-size: 39px;
+                color: $fontWhiteColor;
+            }
+        }
+
+        &__content {
+            min-height: 250px;
+            gap: 90px;
+
+            &-delivery {
+                &-text {
+                    &-upper {
+                        font-size: 25px;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+    }
+}

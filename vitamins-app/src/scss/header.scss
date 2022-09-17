@@ -1,0 +1,113 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+.top-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    z-index: 3;
+    background-color: $blackBgColor;
+
+    &-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 24px 80px 19px 64px;
+    }
+
+    &__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        max-width: 800px;
+        margin-bottom: -10px;
+        margin-left: 65px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 48px;
+    }
+
+    &__link {
+        @include similarStyles;
+    }
+
+    &__phone {
+        margin-right: 57px;
+        @include similarStyles;
+    }
+
+    &__cart {
+        position: relative;
+        cursor: pointer;
+
+        &-img {
+            width: 32px;
+            height: 32px;
+        }
+
+        &-counter {
+            position: absolute;
+            top: 20px;
+            right: -5px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            font-weight: $font-weight-400;
+            font-size: $font-size-12;
+            line-height: $line-height-24;
+            color: $fontBlackColor;
+            background-color: $yellowColor;
+        }
+    }
+
+    @media(max-width: 1366px) {
+        &__nav {
+            display: none;
+        }
+
+        &__cart {
+            display: none;
+        }
+    }
+
+    @media(max-width: 992px) {
+        &-container {
+            padding: 24px 35px 24px 35px;
+        }
+    }
+
+    @media(max-width: 576px) {
+        &-container {
+            padding: 24px 25px 24px 25px;
+        }
+
+        &__phone {
+            display: none;
+        }
+    }
+}
