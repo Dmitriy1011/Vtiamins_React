@@ -3,6 +3,7 @@ import '../../scss/order.scss';
 import gingerImg from '../../assets/img/png/ginger-order.webp';
 import nootriesImg from '../../assets/img/png/nootris.webp';
 import virusImg from '../../assets/img/png/vorus.webp';
+import OrderBtn from "./OrderBtn";
 
 const Order = () => {
     return (
@@ -48,9 +49,7 @@ const Order = () => {
                     </div>
                 </div>
 
-                <div className="order__lower-wrapper">
-                    <button className="order__lower-wrapper-btn">Оформить заказ</button>
-                </div>
+                <OrderBtn />
             </div>
         </div>
     </section>
